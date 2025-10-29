@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nested for loop</title>
+    <style>
+      body {
+        text-align: center;
+        background-color: #53a7dc;
+        color: white;
+        font-family: monospace;
+      }
+      #result {
+        display: inline-block;
+        text-align: start;
+        background-color: black;
+        padding: 15px;
+        margin-block-start: 20px;
+        line-height: 1.2;
+      }
+
+      button {
+        background-color: #008cba;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      button:hover {
+        background-color: #da2e2e;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>L-Shape Pattern</h1>
+    <button onclick="generateLShape()">Generate L-Shape</button>
+    <div id="result"></div>
+
+    <script>
+      function generateLShape() {
+        let str = ''
+        let size = 7
+        for (let i = 1; i <= size; i++) {
+          for (let j = 1; j <= size; j++) {
+            if (j === 1 || i === size) {
+              str += '* '
+            } else {
+              str += '&nbsp;&nbsp;'
+            }
+          }
+          str += '<br>'
+        }
+        document.getElementById('result').innerHTML = str
+      }
+    </script>
+  </body>
+</html>
